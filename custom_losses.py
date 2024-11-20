@@ -1,4 +1,4 @@
-# Copy of segmentation_models functional with the addition of the function weighted_f_score to be used in the added WeightedTverskyLoss class
+# Appendix to segmentation_models functional.py and losses.py with the addition of the function weighted_f_score to be used in the added WeightedTverskyLoss class
 
 SMOOTH = 1e-5
 
