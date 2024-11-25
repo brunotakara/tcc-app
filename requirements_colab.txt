@@ -1,5 +1,5 @@
 tensorflow==2.10.0
-protobuf==3.20
+protobuf<3.20,>=3.9.2
 streamlit
 pydicom
 git+https://github.com/brunotakara/4kd_segmentation_models.git
