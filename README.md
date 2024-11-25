@@ -5,5 +5,4 @@ Web Application of my medical physics undergraduation's final work
 
 
 ## Instruções
-1. Clone este repositório.
-2. Abra o notebook no Colab para executar.
+1. Abra o notebook no Colab para executar e siga o passo passo descrito no notebook.
