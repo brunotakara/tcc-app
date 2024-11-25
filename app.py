@@ -162,7 +162,7 @@ model.compile(
     metrics=metrics
 )
 
-model.load_weights('model_weights.h5')
+model.load_weights('tcc-app/model_weights.h5')
 
 # Função de exemplo para o plot 3D (a lógica de plotagem será adaptada)
 def plot_3d_image(image_data):
@@ -188,7 +188,7 @@ def preprocess_image(image):
 
 
 # Sidebar do streamlit
-st.sidebar.image("MetaSeg.png", use_container_width=True)
+st.sidebar.image("tcc-app/MetaSeg.png", use_container_width=True)
 st.sidebar.markdown(
     """
     Acesse o [GitHub](https://github.com/brunotakara/tcc-app) do projeto
