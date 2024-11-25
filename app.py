@@ -188,7 +188,7 @@ def preprocess_image(image):
 
 
 # Sidebar do streamlit
-st.sidebar.image("tcc-app/MetaSeg.png", use_container_width=True)
+st.sidebar.image("tcc-app/MetaSeg.png")
 st.sidebar.markdown(
     """
     Acesse o [GitHub](https://github.com/brunotakara/tcc-app) do projeto
