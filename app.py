@@ -162,7 +162,7 @@ model.compile(
     metrics=metrics
 )
 
-model.load_weights('tcc-app/model_weights.h5')
+#model.load_weights('tcc-app/model_weights.h5')
 
 # Função de exemplo para o plot 3D (a lógica de plotagem será adaptada)
 def plot_3d_image(image_data):
@@ -186,6 +186,15 @@ def preprocess_image(image):
     image_array = image_array / 255.0  # Normaliza para [0, 1]
     return image_array
 
+
+# Mapa para pegar os pesos do modelo escolhido pelo usuário
+def get_weights_path(tumor_type, modality):
+    weights_map = {
+        ("Metástase", "T1 com contraste"): "tcc-app/weights/meta_t1c_weights.h5",
+        ("Metástase", "FLAIR"): "tcc-app/weights/meta_flair_weights.h5",
+        ("Metástase", "BRAVO"): "tcc-app/weights/mmeta_bravo_weights.h5",
+    }
+    return weights_map.get((tumor_type, modality), None)
 
 # Sidebar do streamlit
 st.sidebar.image("tcc-app/MetaSeg.png")
@@ -215,7 +224,7 @@ with col1:
 
     # Seletor de tipo de tumor
     tumor_type = st.selectbox("Selecione o Tipo de Tumor", ["Metástase", "Glioblastoma", "Meningioma"])
-    image_modality = st.selectbox("Selecione a Modalidade de Imagem", ["T1", "T1 com contraste", "T2", "T2 FLAIR", "BRAVO"])
+    image_modality = st.selectbox("Selecione a Modalidade de Imagem", ["T1", "T1 com contraste", "T2", "FLAIR", "BRAVO"])
 
 # Coluna 2: Inferência
 with col2:
@@ -225,7 +234,14 @@ with col2:
     if st.button("Realizar Inferência"):
         if uploaded_file is not None:
             try:
-                progress_text = "Realizando inferência, por favor aguarde..."
+                weights_path = get_weights_path(tumor_type, image_modality)
+                if weights_path and os.path.exists(weights_path):
+                    model.load_weights(weights_path)  # Carrega os pesos específicos
+                    st.success(f"Realizando inferência, por favor aguarde...")
+                else:
+                    st.error(f"Pesos não encontrados para {tumor_type} na modalidade {image_modality}.")
+                    st.stop()
+                    
                 progress_bar = st.progress(0)
 
                 # Salvar o arquivo temporariamente
