@@ -1,4 +1,4 @@
-![Descrição alternativa](tcc-app/images/MetaSeg.png)
+![Descrição alternativa](images/MetaSeg.png)
 
 # tcc-app
 Web Application of my medical physics undergraduation's final work
