@@ -197,7 +197,7 @@ def get_weights_path(tumor_type, modality):
     return weights_map.get((tumor_type, modality), None)
 
 # Sidebar do streamlit
-st.sidebar.image("tcc-app/MetaSeg.png")
+st.sidebar.image("tcc-app/images/MetaSeg.png")
 st.sidebar.markdown(
     """
     Acesse o [GitHub](https://github.com/brunotakara/tcc-app) do projeto
