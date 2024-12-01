@@ -17,7 +17,7 @@ b) Abra o VS Code
 c) Aperte Ctrl+J para acessar o terminal
 d) Digite o seguinte comando e aperte enter:
 
-winget install -e --id Python.Python.3.9
+`winget install -e --id Python.Python.3.9`
 
 e) Aguarde o download do Python
 
@@ -25,36 +25,34 @@ f) Feche o VSCode e abra novamente para completar a instalação
 
 g) Após reabrir o VSCode digite o seguinte comando e aperte enter:
 
-git clone https://github.com/brunotakara/tcc-app
+`git clone https://github.com/brunotakara/tcc-app`
 
 h) Agora atualize o seu instalador pip pelo seguinte comandor:
 
-pip install --upgrade pip
+`pip install --upgrade pip`
 
 i) Crie um ambiente virtual para instalar as dependências e não alterar nenhuma dependência global, assim você garante que as alterações dos pacotes só serão utilizadas para essa aplicação, para isso digite o seguinte comando e aperte enter:
 
-python -m venv venv
+`python -m venv venv`
 
 j) Ative o ambiente virtual digitando o seguinte comando e apertando enter:
 
-.\venv\Scripts\activate
+`.\venv\Scripts\activate`
 
 k) Agora instale as dependências, digitando cada uma das linhas a seguir e apertando enter:
 
-pip install -r tcc-app/requirements_vscode.txt
+`pip install -r tcc-app/requirements_vscode.txt`
 
-pip install protobuf==3.20
+`pip install protobuf==3.20`
 
-pip install matplotlib
+`pip install matplotlib`
 
-pip install nibabel
+`pip install nibabel`
 
-pip install tensorflow-cpu
+`pip install tensorflow-cpu`
 
 l) Rode a aplicação pelo streamlit, digitando o seguinte comando e apertando enter:
 
-streamlit run tcc-app/app.py
+`streamlit run tcc-app/app.py`
 
-m) Ele vai solicitar para vc preencher com seu e-mail, mas não é obrigatório você pode apenas apertar Enter, por fim, você será redirecionado para a aplicação no seu navegador padrão.
-
-Local URL: http://localhost:8501
+m) Ele vai solicitar para vc preencher com seu e-mail, mas não é obrigatório você pode apenas apertar Enter, por fim, você será redirecionado para a aplicação no seu navegador padrão, como pela URL: http://localhost:8501
