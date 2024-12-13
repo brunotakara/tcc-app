@@ -13,8 +13,11 @@ Aplicação web do meu Trabalho de Conclusão de Curso de Física Médica pela U
 Em caso de falha no carregamento pelo app em nuvem, você pode utilizar o aplicativo em seu dispositivo local, para isso, siga o seguinte passo a passo:
 
 a) Faça o Download do Visual Studio Code pelo site: https://code.visualstudio.com/ 
+
 b) Abra o VS Code
+
 c) Aperte Ctrl+J para acessar o terminal
+
 d) Digite o seguinte comando e aperte enter:
 
 `winget install -e --id Python.Python.3.9`
