@@ -44,7 +44,7 @@ j) Ative o ambiente virtual digitando o seguinte comando e apertando enter:
 
 k) Agora instale as dependências, digitando cada uma das linhas a seguir e apertando enter:
 
-`pip install -r tcc-app/requirements_vscode.txt`
+`pip install -r tcc-app/requirements_vs_new.txt`
 
 `pip install protobuf==3.20`
 
